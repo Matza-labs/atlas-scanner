@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "atlas-scanner"
+version = "0.1.0"
+description = "Scanner Agent for PipelineAtlas — fetches CI/CD data from Jenkins, GitLab, GitHub"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "atlas-sdk @ file:///${PROJECT_ROOT}/../atlas-sdk",
+    "redis>=5.0",
+    "python-jenkins>=1.8",
+    "python-gitlab>=4.0",
+    "pyyaml>=6.0",
+    "httpx>=0.25",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-asyncio>=0.21",
+    "ruff>=0.1.0",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
