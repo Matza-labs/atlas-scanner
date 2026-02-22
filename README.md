@@ -10,8 +10,8 @@ Connects to CI/CD platforms via read-only API tokens, fetches pipeline definitio
 
 | Platform | Status |
 |----------|--------|
-| Jenkins | 🔵 MVP |
-| GitLab CI | 🔵 MVP |
+| Jenkins | ✅ Completed |
+| GitLab CI | ✅ Completed |
 | GitHub Actions | 🟡 Phase 2 |
 
 ## Key Features
